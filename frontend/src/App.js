@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import About from './components/About'; 
-import Contact from './components/Contact';
-import StudentPortal from './components/StudentPortal';
-import Login from './components/Login';
-import AdminDashboard from './components/AdminDashboard';
-import CertificateDetail from './components/CertificateDetail';
+import Navbar from './components/Navbar.js';
+import Home from './components/Home.js';
+import About from './components/About.js'; 
+import Contact from './components/Contact.js';
+import StudentPortal from './components/StudentPortal.js';
+import Login from './components/Login.js';
+import AdminDashboard from './components/AdminDashboard.js';
+import CertificateDetail from './components/CertificateDetail.js';
 
 function App() {
   return (
