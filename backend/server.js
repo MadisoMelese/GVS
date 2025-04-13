@@ -28,7 +28,7 @@ const Admin = require("./models/Admin");
 const createAdmin = async () => {
   const existingAdmin = await Admin.findOne({ email: "admin@example.com" });
   if (!existingAdmin) {
-    const hashedPassword = await bcrypt.hash("admin123", 10);
+    const hashedPassword = await bcrypt.hash("1234", 10);
     const newAdmin = new Admin({
       email: "admin@example.com",
       password: hashedPassword,
