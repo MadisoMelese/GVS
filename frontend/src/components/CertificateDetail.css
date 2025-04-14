@@ -2,8 +2,9 @@
   font-family: "Arial", sans-serif;
   text-align: center;
   padding: 20px;
-}
+  margin-top: 5.625rem;
 
+}
 .certificate-layout {
   border: 5px solid #004a99;
   border-radius: 15px;

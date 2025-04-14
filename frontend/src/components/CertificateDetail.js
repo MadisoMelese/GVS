@@ -4,6 +4,7 @@ import { FaCertificate, FaSignature, FaCalendarAlt, FaRegStar } from 'react-icon
 import { QRCodeCanvas } from 'qrcode.react'; // Use QRCodeCanvas
 import './CertificateDetail.css'; // Import CSS for certificate styling
 
+const url = 'http://localhost:5000'; // Base URL for API requests
 const CertificateDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -19,7 +20,7 @@ const CertificateDetail = () => {
         const data = await response.json();
         setCertificateData(data);
         setLoading(false);
-        setQrCodeUrl(`http://localhost:5000/api/certificates/${id}`);
+        setQrCodeUrl(`${url}/api/certificates/${id}`);
         setCurrentDate(new Date().toLocaleDateString()); // Set current date
       } catch (error) {
         console.error('Error fetching certificate data:', error);
@@ -48,7 +49,7 @@ const CertificateDetail = () => {
 
   return (
     <div className="certificate-detail">
-      <div className="certificate-layout">
+      <div className="certificate-layout ">
         <header className="certificate-header">
           <h1>Certificate of Achievement</h1>
           <FaCertificate className="certificate-icon" />

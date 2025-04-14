@@ -34,8 +34,11 @@ exports.generateCertificatePDF = async (req, res) => {
     doc.pipe(res);
 
     // Draw background rectangle
-    doc.rect(40, 40, 520, 280).fill('#f9f9f9').stroke('#4a90e2').lineWidth(8);
-
+    doc.rect(0, 0, doc.page.width, doc.page.height)
+    .fill('#f9f9f9')
+    .stroke('#4a90e2')
+    .lineWidth(8);
+ 
     // Certificate Header
     doc.fontSize(20)
        .fillColor('#4a90e2')
@@ -90,7 +93,7 @@ exports.generateCertificatePDF = async (req, res) => {
        .fillColor('#777')
        .text('Certified by CertiSys', { align: 'center' })
        .moveDown(1);
-
+   
     // Finalize PDF file
     doc.end();
   } catch (error) {
