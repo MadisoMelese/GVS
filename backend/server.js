@@ -22,23 +22,3 @@ app.listen(PORT, () => {
   connectDB();
   console.log(`Server running on port ${PORT}`);
 });
-const bcrypt = require("bcrypt");
-const Admin = require("./models/Admin");
-
-const createAdmin = async () => {
-  const existingAdmin = await Admin.findOne({ email: "admin@gmail.com" });
-  if (!existingAdmin) {
-    const hashedPassword = await bcrypt.hash("1234", 10);
-    const newAdmin = new Admin({
-      email: "admin@example.com",
-      password: hashedPassword,
-    });
-    await newAdmin.save();
-    console.log("Admin account created.");
-  } else {
-    console.log("Admin already exists.");
-  }
-};
-
-// Call function at startup
-createAdmin();
