@@ -3,6 +3,8 @@ import { Line, Bar } from "react-chartjs-2";
 import { FaUser, FaChartBar, FaListAlt, FaFileExcel } from "react-icons/fa";
 import "./AdminDashboard.css";
 import axios from "axios";
+import { Link } from "react-router-dom";
+import AdminSidebar from "./AdminSidebar.js";
 
 // Sample data for charts
 const lineChartData = {
@@ -97,7 +99,7 @@ const AdminDashboard = () => {
         <h1>Admin Dashboard</h1>
         <p>Manage and review the platform's performance and user data here.</p>
       </header>
-
+      <AdminSidebar />
       {/* Main Dashboard Content */}
       <section className="dashboard-content">
         <div className="dashboard-cards">
@@ -160,14 +162,14 @@ const AdminDashboard = () => {
           services with a commitment to customer satisfaction.
         </p>
         <div className="footer-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-          <a href="#">Contact Us</a>
+          <Link to={"#"}>Privacy Policy</Link>
+          <Link to={"#"}>Terms of Service</Link>
         </div>
-        <div className="footer-bottom">
+        <div className="footer-bottom">/
           <p>
             &copy; 2025 CertiSys. All rights reserved. | Designed by{" "}
-            <a href="#">Bonga University 4'th Year Computer Science Students</a>
+          <Link to={"#"}>Bonga University 4'th Year Computer Science Studentss</Link>
+
           </p>
         </div>
       </footer>

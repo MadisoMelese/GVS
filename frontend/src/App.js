@@ -6,7 +6,7 @@ import About from './components/About.js';
 import Contact from './components/Contact.js';
 import StudentPortal from './components/StudentPortal.js';
 import Login from './components/Login.js';
-import AdminDashboard from './components/AdminDashboard.js';
+import AdminDashboard from './components/admin/AdminDashboard.js';
 import CertificateDetail from './components/CertificateDetail.js';
 
 function App() {
