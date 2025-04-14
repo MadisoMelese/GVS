@@ -5,7 +5,7 @@ import "./AdminDashboard.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import AdminSidebar from "./AdminSidebar.js";
-import { redirect } from './../../../node_modules/@remix-run/.router-yBFjOw2P/utils';
+
 
 // Sample data for charts
 const lineChartData = {
@@ -36,7 +36,10 @@ const AdminDashboard = () => {
   const [file, setFile] = useState(null);
   const [uploadStatus, setUploadStatus] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const toggleSidebar = () =>{
+    setIsSidebarOpen(!isSidebarOpen);
+  }
   // Function to handle file selection
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);
@@ -94,16 +97,13 @@ const AdminDashboard = () => {
   };
 
   return (
-    <div className="admin-dashboard">
+    <div className="admin-dashboard min-h-screen flex flex-col md:flex-row relative ">
       {/* Header Section */}
       <header className="hero-section">
         <h1>Admin Dashboard</h1>
         <p>Manage and review the platform's performance and user data here.</p>
       </header>
- 
-      <AdminSidebar />
-
-   
+  <AdminSidebar />
       {/* Main Dashboard Content */}
       <section className="dashboard-content">
         <div className="dashboard-cards">
