@@ -206,12 +206,12 @@ const Home = () => {
       <footer className="footer">
     <h3>CertiSys</h3>
     <p>Your trusted partner in excellence. Providing quality and reliable services with a commitment to customer satisfaction.</p>
-    <div class="footer-links">
+    <div className="footer-links">
         <a href="#">Privacy Policy</a>
         <a href="#">Terms of Service</a>
         <a href="#">Contact Us</a>
     </div>
-    <div class="footer-bottom">
+    <div className="footer-bottom">
         <p>&copy; 2024 Company Name. All rights reserved. | Designed by <a href="#">Bonga University 4'th Year Computer Science Students</a></p>
     </div>
 </footer>
