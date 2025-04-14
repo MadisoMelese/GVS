@@ -7,7 +7,13 @@ const uploadroutes = require("./routes/uploadRoutes"); // Import the upload rout
 const certificateRoutes = require("./routes/certificateRoutes"); // Import the certificate routes
 const app = express();
 
-app.use(cors({ origin: "http://localhost:3000", credentials: true }));
+app.use(cors({ 
+  origin: [
+    "http://localhost:3000", 
+    "http://172.20.144.1:3000"
+  ],
+  credentials: true 
+}));
 app.use(cookieParser());
 app.get("/", (req, res) => {
   res.send("Backend is running...");
