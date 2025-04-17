@@ -104,7 +104,7 @@ const AdminDashboard = () => {
         <h1>Admin Dashboard</h1>
         <p>Manage and review the platform's performance and user data here.</p>
       </header>
-  {/* <AdminSidebar /> */}
+            <AdminSidebar />
       {/* Main Dashboard Content */}
       <section className="dashboard-content">
         <div className="dashboard-cards">
