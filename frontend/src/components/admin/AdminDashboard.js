@@ -104,7 +104,9 @@ const AdminDashboard = () => {
         <h1>Admin Dashboard</h1>
         <p>Manage and review the platform's performance and user data here.</p>
       </header>
-            <AdminSidebar />
+      <aside className="">
+        <AdminSidebar />
+      </aside>
       {/* Main Dashboard Content */}
       <section className="dashboard-content">
         <div className="dashboard-cards">
@@ -172,7 +174,7 @@ const AdminDashboard = () => {
         </div>
         <div className="footer-bottom">/
           <p>
-            &copy; 2025 CertiSys. All rights reserved. | Designed by{" "}
+            &copy; 2025 BUWGCVS. All rights reserved. | Designed by{" "}
           <Link to={"#"}>Bonga University 4'th Year Computer Science Studentss</Link>
 
           </p>
